@@ -19,7 +19,7 @@ class WatchChangeHandler(FileSystemEventHandler):
     def on_modified(self, event):
         if event.is_directory:
             return
-        if get_ext(event.src_path) in ('.jpg', '.jpeg'):
+        if get_ext(event.src_path) in ('.jpg', '.jpeg', '.png'):
             print('%s has been modified.' % event.src_path)
 
             Processor.GrayScaleProcessor().process(event.src_path)
