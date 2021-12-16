@@ -4,9 +4,9 @@
 ## Require
 
 ```
-Flask==1.1.2
-opencv-python==4.4.0.44
-watchdog==0.10.4
+Flask==2.0.2
+opencv-python==4.5.4.60
+watchdog==2.1.6
 ```
 
 ## Usage
