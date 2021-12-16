@@ -23,6 +23,9 @@ def upload():
 
     fs = request.files['file']
 
+    if '' == fs.filename:
+        return render_template("index.html", message="ファイルを指定してください。")
+
     # 下記のような情報がFileStorageからは取れる
     print('file_name={}'.format(fs.filename))
     print('content_type={} content_length={}, mimetype={}, mimetype_params={}'.format(
